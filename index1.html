@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lunch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        /* *{
+            margin: 0px;
+            padding: 0px;
+        } */
+        .section {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .section h2 {
+        font-size: 45px;
+        color: #ff3d00;
+        margin-bottom: 40px;
+    }
+
+    .recipes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        padding: 0 50px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 25px;
+        margin-bottom: 10px;
+        color: #d84315;
+    }
+
+    .card-content p {
+        color: #555;
+        margin-bottom: 15px;
+    }
+    .view-btn {
+        background: linear-gradient(90deg, #ff6f00, #ff3d00);
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .view-btn:hover {
+        background: linear-gradient(90deg, #ff9100, #ff5722);
+        transform: scale(1.05);
+    }
+    header {
+         background: linear-gradient(90deg, #ff6f00, #ff3d00);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+          
+    }
+    #ad{
+        animation-name: moving;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        
+        font-size: 35px;
+
+    }
+    @keyframes moving {
+        from{
+            margin-left: 0px;
+        }
+        to{
+            margin-left: 1100px;
+        }
+    }
+    @media (max-width:700px) {
+        #ad{
+        animation-name: moving;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+       
+        font-size: 35px;
+
+    }
+    @keyframes moving {
+        from{
+            margin-left: 0px;
+        }
+        to{
+            margin-left: 270px;
+        }
+    }   
+    }
+    .back-container {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #ff5722;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border: 2px solid black;
+            transition: 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #ff784e;
+            transform: translateY(-3px);
+        }
+    
+    </style>
+</head>
+<body>
+    <header >
+    <h1 class="ab"><span>Food</span><span>Xpress</span><i class="fa-solid fa-truck-fast" id="ad"></i></h1>
+    <nav>
+        <h2>Desserts</h2>
+    </nav>
+</header>
+    <section class="section">
+        <h2>Popular desserts</h2>
+        <div class="recipes">
+    
+            <div class="card">
+                <img src="https://i.ndtvimg.com/i/2018-04/rasmalai_650x400_51523430877.jpg">
+                <div class="card-content">
+                    <h3>Rasmalai</h3>
+                    <p>About Rasmalai Recipe: An all-time favorite, rasmalai is a delectable Bengali dessert, freshly made ...</p>
+                    <p class="time"> <i class="fa-solid fa-clock"></i> 1h to 2h</p>
+                    <!-- <p>4.5<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p> -->
+                    <a href="rasmalai.html" class="view-btn">View Recipe</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="https://blog.swiggy.com/wp-content/uploads/2024/09/Image-1_Gulab-Jamun-1024x538.png">
+                <div class="card-content">
+                    <h3>Gulab Jamun</h3>
+                    <p>Gulab jamun is the most popular Indian dessert. Gulab Jamun’s are deep-fried donut-like balls soaked in ...</p>
+                    <p> <i class="fa-solid fa-clock"></i>2h to 3h</p>
+                     <!-- <p>3.5<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></p> -->
+                    <a href="gulabjamun.html" class="view-btn">View Recipe</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="http://cdn.cdnparenting.com/articles/2020/01/24153853/Carrot-Halwa-Recipe.webp">
+                <div class="card-content">
+                    <h3>Carrot Halwa</h3>
+                    <p>Gajar Halwa, Carrot Halwa or Gajrela is a north Indian sweet. It is traditionally made by cooking .......</p>
+                    <p> <i class="fa-solid fa-clock"></i> 30m to 1.5h</p>
+                    <!-- <p>3.5<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i><i class="fa-regular fa-star"></i></p> -->
+                    <a href="carrothalwa.html" class="view-btn">View Recipe</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="https://www.tasteofhome.com/wp-content/uploads/2019/05/Fried-Ice-Cream-Dessert-Bars-_EXPS_SDJJ19_232652_B02_06_1b_rms-2.jpg">
+                <div class="card-content">
+                    <h3>Fried Ice Cream Dessert Bars</h3>
+                    <p>Fried ice cream is such a delicious treat, but it can be a hassle to make individual servings.</p>
+                    <p> <i class="fa-solid fa-clock"></i> 2h to 3.5h</p>
+                    <!-- <p>4.5<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p> -->
+                    <a href="Friedice.html" class="view-btn">View Recipe</a>
+                </div>
+             </div>
+              <div class="card">
+                <img src="https://www.scrumptiously.com/wp-content/uploads/2023/02/CremeCaramel.webp">
+                <div class="card-content">
+                    <h3> Crème Caramel</h3>
+                    <p>Crème caramel is the perfect balance of lightness and indulgence. A staple French dessert with ...</p>
+                    <p> <i class="fa-solid fa-clock"></i> 2h to 4h</p>
+                    <!-- <p>4.5<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p> -->
+                    <a href="Creme.html" class="view-btn">View Recipe</a>
+                </div>
+             </div>
+              <div class="card">
+                <img src="https://pothgaal.com/cdn/shop/files/Milk_Mysore_Pak.jpg?v=1747371100&width=1400">
+                <div class="card-content">
+                    <h3>Mysore Pak</h3>
+                    <p>A popular South Indian sweet made with gram flour, sugar and lots of ghee. This recipe yields Mysore.</p>
+                    <p> <i class="fa-solid fa-clock"></i> 2h to 2h 30min</p>
+                    <!-- <p>4.5<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p> -->
+                    <a href="mysorepak.html" class="view-btn">View Recipe</a>
+                </div>
+             </div>
+             
+        </div>
+    </section>
+     <div class="back-container">
+        <a href="index.html" class="back-btn">⬅ Back</a>
+    </div>
+    
+</body>
+</html>

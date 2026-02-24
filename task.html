@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            width: 100%;
+            height: 90%;   
+        }
+         .list{
+            list-style: none;
+            display: flex;
+            flex-direction: row;  /* nav items in row */
+            flex-wrap: wrap;      /* wrap if small screen */
+            gap: 40px;
+            margin: 0;
+            padding: 0;
+            justify-content: end;
+        }
+        header{
+            background-color: orange;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 20px;
+            position: sticky;
+            box-shadow:  0 -3px 5px rgba(0, 0, 0, 0.3);
+            width: 1500px;
+            margin: 10px;
+        }
+        .text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .text2{
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid lightpink;
+            box-shadow: 2px 2px 10px;
+        }
+        .list{
+            list-style: none;
+            display: flex;
+            justify-content: end;
+            /* align-items: center; */
+            gap: 30px;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            color: darkred;
+            
+        }
+        .one{
+            font-size: 25px;
+            font-weight: 700;
+        }
+        .middle{
+            background-color: black;
+            color: whitesmoke;
+            padding: 30px;
+            text-align: center;
+            padding-top: 150px;
+            padding-bottom: 160px;
+            background-image: url(food2.jpg);
+            background-size: cover;
+        }
+        .box{
+            font-size: 18px;
+            margin-top:40px;
+            border: 2px solid ; 
+            width: fit-content;
+            margin-left: 25px;
+            background-color: green;
+            padding: 12px;
+            box-shadow: 2px 2px 10px green;
+            display: inline-block;
+        }
+         .box1{
+            border: 2px solid;
+            width: fit-content;
+            padding: 12px;
+            font-size: 18px;
+            box-shadow: 2px 2px 8px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .TrendingRecipe{
+            text-align: center;
+            color: red;
+            font-size: 50px;
+        }
+        .inline-block{
+            display: inline-block;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .box2:hover{
+             width: 450px;
+            height: 550px;
+            transform: scale(1.05);
+            box-shadow:4px 6px 10px ;
+            justify-content: center;
+            position: relative;  
+        }
+        .box2{
+            border: 2px solid white;
+            width: 400px;
+            height: 500px;
+            box-shadow: 2px 3px 5px;
+            border-radius: 30px;
+            padding: 10px;
+            transition: 1s;
+            
+        }
+        .img1{
+             width: 400px;
+            height: 300px;
+            border-radius: 30px;
+        }
+        .img1:hover{
+
+        }
+        .rate{
+            color: red;
+            font-size: 20px;
+            border: 2px solid black;
+            padding: 5px;
+            background-color: wheat;
+        }
+        #name{
+            font-size: 30px;
+        }
+        .ratting{
+            color: green;
+            list-style: none;
+            justify-content: end;
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            top: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <video  autoplay muted loop src="v.mp4"></video>
+    </div>
+    <center>
+    <div class="text">
+       <h1> FoodXpress<br>  India’s #1 <br> Food Recipes Book</h1>
+       <p>Discover a world of culinary delights with our expertly curated recipes, designed to inspire and satisfy every palate.</p>
+    </div>
+    <div class="text2">
+         <h4>scroll down</h4>
+    </div>
+    </center>
+     <header>
+        <div class="one"> 
+            <span style="color: green;">Food</span><span style="color: red;">Xpress</span>
+        </div>
+        <nav>
+            <ul class="list">
+                <li>Home</li>
+                <li>Categories</li>
+                <li>Reciepies</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+     <main>
+        <div class="middle">
+            
+            
+            <p style="font-size: 25px;">Food Delivery app</p>
+            <p style="margin-top: 50px;font-size: 40px;font-weight:1000;">Discover and Recieve your favourite food at your Doorstep</p>
+            <p style="margin-top: 90px; font-weight: 400;">Your ultimate digital cookbook with hundreds of Reciepies ready at any time and for any occasion</p>
+            <p class="box">Explore Reciepies </p>
+            <p class="box1">Browse Categories</p>
+        </div>
+    </main>
+</div>
+ <div>
+    <h1 class="TrendingRecipe">Trending Recipe</h1>
+    </div>
+   <div class="inline-block">
+        <div class="box2">
+        <img  class="img1" src="https://bonmasala.com/wp-content/uploads/2022/10/mutton-biriyani-recipe.jpeg">
+        <div>
+            <h2 id="name" >Chicken Biryani </h2>
+        <ul class="ratting"><li>3.5</li></ul>
+    </div>
+        
+        <p><span class="rate">view Reciepies</span><br><br>
+Premium basmati rice layered and slow cooked in dum style then with fried onion and a variety of fresh herbs and spices.</p>
+        
+    </div><br>
+    <div class="box2">
+        <img  class="img1" src="https://t3.ftcdn.net/jpg/00/96/19/86/360_F_96198695_oyJg0I7ELpXI6608FI942PX9LlRRyEnd.jpg">
+        <h2 id="name" >Dessert</h2>
+        <p><span class="rate">view Reciepies</span><br><br>
+Soft, spongy, and coated in silky milk chocolate, this eggless bento cake is perfect for birthdays, celebrations, or a sweet little treat-yourself moment.</p>
+        
+    </div><br>
+    <div class="box2">
+        <img  class="img1" src="https://www.yumcurry.com/wp-content/uploads/2020/06/pizza-margherita-recipe.jpg">
+        <h2 id="name" >Pizza</h2>
+        <p>
+            <span class="rate">view Reciepies</span><br><br>
+            Delicate, topped with creamy mozzarella and tomato sauce, this Margherita pizza is a simple yet flavorful classic—perfect for cozy dinners, or sharing with friends on a weekend treat.
+
+        </p>
+        </div>
+    </div>
+    <br> <br> <br>
+   <div class="inline-block">
+        <div class="box2">
+        <img  class="img1" src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/03/matar-paneer.jpg">
+        <div>
+            <h2 id="name" >Mutter Paneer</h2>
+        <ul class="ratting"><li>3.5</li></ul>
+    </div>
+        
+        <p><span class="rate">view Reciepies</span><br><br>
+Soft cubes of paneer and sweet green peas simmered in a rich, spiced tomato-onion gravy. Comforting, flavorful, and perfect with naan or steamed rice—a true vegetarian favorite!</p>
+        
+    </div><br>
+    <div class="box2">
+        <img  class="img1" src="https://veenaazmanov.com/wp-content/uploads/2017/07/Homemade-Chocolate-Ice-Cream-3.jpg">
+        <h2 id="name" >Choco Lush</h2>
+        <p><span class="rate">view Reciepies</span><br><br>
+Creamy, rich, and indulgent, this homemade chocolate ice cream melts in your mouth with every bite. Perfect for chocolate lovers craving a sweet escape!</p>
+        
+    </div><br>
+    <div class="box2">
+        <img  class="img1" src="https://drinkdesoi.com/cdn/shop/articles/Margarita_Mocktail_Recipe_2048x2048.webp?v=1740687128">
+        <h2 id="name" >Margarita Mocktail</h2>
+        <p>
+            <span class="rate">view Reciepies</span><br><br>
+           Zesty, sparkling, and oh-so-refreshing — this Margarita Mocktail brings the fiesta without the buzz! Bursting with lime, a kiss of sweetness, and that signature salted rim, it’s pure summer in a glass.
+        </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodXpress - India's #1 Food Recipes Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #fff8f0;
+      color: #333;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(90deg, #ffb703, #fb8500);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      z-index: 100;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .logo span:first-child {
+      color: #00a36c;
+    }
+
+    .logo span:last-child {
+      color: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 35px;
+    }
+
+    nav ul li {
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover {
+      color: #333;
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .hero video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3rem;
+      line-height: 1.3;
+      font-weight: 700;
+    }
+
+    .hero-overlay p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      max-width: 600px;
+    }
+
+    .hero-overlay .scroll {
+      margin-top: 40px;
+      font-size: 1rem;
+      background-color: #ffb703;
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: black;
+      font-weight: 600;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      background: linear-gradient(90deg, #f8edeb, #ffe5b4);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      color: #d62828;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      color: #333;
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 40px;
+    }
+
+    .about button {
+      background-color: #06d6a0;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .about button:hover {
+      background-color: #04976f;
+    }
+
+    /* ===== TRENDING RECIPES ===== */
+    .trending {
+      text-align: center;
+      padding: 80px 40px;
+      background: #fff;
+    }
+
+    .trending h2 {
+      font-size: 2.8rem;
+      color: #ef233c;
+      margin-bottom: 60px;
+      text-transform: uppercase;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      background: linear-gradient(180deg, #fff8f0, #fff);
+      padding: 20px;
+      text-align: left;
+    }
+
+    .card-content h3 {
+      color: #d62828;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .card-content span {
+      display: inline-block;
+      background-color: #ffb703;
+      color: black;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card-content span:hover {
+      background-color: #fb8500;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    footer p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px 20px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero-overlay h1 {
+        font-size: 2rem;
+      }
+
+      .about h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <span>Food</span><span>Xpress</span>
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Categories</li>
+        <li>Recipes</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <video autoplay muted loop src="v.mp4"></video>
+    <div class="hero-overlay">
+      <h1>India’s #1 Food Recipes Book</h1>
+      <p>Explore, cook, and enjoy! Hundreds of curated recipes designed to bring authentic flavors to your kitchen.</p>
+      <div class="scroll">Scroll Down ⬇</div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h2>Discover Delicious Moments</h2>
+    <p>FoodXpress brings you a world of recipes, from traditional favorites to modern delights. Find step-by-step guides, expert tips, and flavors that inspire your next meal!</p>
+    <button>Explore Recipes</button>
+  </section>
+
+  <!-- TRENDING RECIPES -->
+  <section class="trending">
+    <h2>Trending Recipes</h2>
+    <div class="recipe-grid">
+      <div class="card">
+        <img src="https://bonmasala.com/wp-content/uploads/2022/10/mutton-biriyani-recipe.jpeg" alt="Chicken Biryani" />
+        <div class="card-content">
+          <h3>Chicken Biryani</h3>
+          <p>Premium basmati rice slow-cooked with herbs, spices, and tender chicken for rich aroma and flavor.</p>
+          <span>View Recipe</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://veenaazmanov.com/wp-content/uploads/2017/07/Homemade-Chocolate-Ice-Cream-3.jpg" alt="Choco Lush" />
+        <div class="card-content">
+          <h3>Choco Lush</h3>
+          <p>Silky homemade chocolate ice cream — creamy, rich, and a dream for every sweet lover.</p>
+          <span>View Recipe</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.yumcurry.com/wp-content/uploads/2020/06/pizza-margherita-recipe.jpg" alt="Pizza" />
+        <div class="card-content">
+          <h3>Margherita Pizza</h3>
+          <p>Classic pizza topped with tomato sauce, mozzarella, and basil — perfect for cozy evenings.</p>
+          <span>View Recipe</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/03/matar-paneer.jpg" alt="Mutter Paneer" />
+        <div class="card-content">
+          <h3>Mutter Paneer</h3>
+          <p>Soft paneer cubes cooked with peas in spicy tomato gravy — a North Indian comfort food.</p>
+          <span>View Recipe</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://t3.ftcdn.net/jpg/00/96/19/86/360_F_96198695_oyJg0I7ELpXI6608FI942PX9LlRRyEnd.jpg" alt="Dessert" />
+        <div class="card-content">
+          <h3>Chocolate Dessert</h3>
+          <p>Soft, spongy, and chocolate-rich — this dessert melts your heart and sweetens your day.</p>
+          <span>View Recipe</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://drinkdesoi.com/cdn/shop/articles/Margarita_Mocktail_Recipe_2048x2048.webp?v=1740687128" alt="Mocktail" />
+        <div class="card-content">
+          <h3>Margarita Mocktail</h3>
+          <p>Zesty, sparkling, and refreshing — summer in a glass without the buzz!</p>
+          <span>View Recipe</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h3>FoodXpress © 2025</h3>
+    <p>Designed by xyz | Crafted with ❤ for food lovers everywhere.</p>
+  </footer>
+</body>
+</html>
